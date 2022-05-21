@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/a59b9b09ab.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./gallery.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="header">
+        <img id="gallery-icon" src="./gallery-icon.png" >
+        <h1 id="gallery-heading">Gallery</h1>
+    </div>
+
+    <div class="gallery-cont">
+        <div class="photo-gallery-cont">
+            <div class="title">Photos</div>
+            <div class="photo-cont cont"></div>
+        </div>
+
+        <div class="video-gallery-cont">
+            <div class="title">Videos</div>
+            <div class="video-cont cont"></div>
+        </div>
+    </div>
+    
+    <div title="Back to Camera" class="back">
+        <span class="material-icons">
+            arrow_back_ios
+        </span>
+    </div>
+
+    <script src="./db.js"></script>
+    <script src="./gallery.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        let back = document.querySelector(".back");
+        back.addEventListener("click", (e) => {
+            location.assign("./index.html");
+        })
+    </script>
+</body>
+</html>

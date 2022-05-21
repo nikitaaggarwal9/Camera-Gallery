@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-cont {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+.actions-cont {
+    height: 19rem;
+    width: 5rem;
+    /* background-color: lightblue; */
+    position: absolute;
+    top: calc((100vh - 19rem) / 2);
+    right: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actions-cont>* {
+    height: 5rem;
+    width: 100%;
+    /* background-color: lightpink; */
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.actions-cont>*:hover {
+    transform: scale(1.05);
+}
+
+.record-btn {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.capture-btn {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.scale-record {
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes scale-record {
+    0% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+.scale-capture {
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+@keyframes scale-capture {
+    0% {
+        transform: scale(0.85);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.timer-cont {
+    position: absolute;
+    top: 30rem;
+    left: 3rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.timer {
+    display: none;
+}
+
+.filter-cont {
+    position: absolute;
+    top: calc((100vh - 16rem) / 2);
+    left: 5rem;
+    height: 16rem;
+    width: 5rem;
+    background-color: burlywood;
+    z-index: 2;
+}
+
+.filter {
+    height: 4rem;
+    background-image: url("https://picsum.photos/536/354");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.orange {
+    background-color: rgba(255, 130, 5, 0.292);
+}
+
+.brown {
+    background-color: rgba(165, 42, 42, 0.272);
+}
+
+.pink {
+    background-color: rgba(255, 192, 203, 0.336);
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.filter-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: azure; */
+    z-index: 1;
+}
+
+.material-icons {
+    color: black;
+    font-size: 3rem !important;
+}
+
+.gallery {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: white;
+}
